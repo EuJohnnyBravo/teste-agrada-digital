@@ -22,22 +22,23 @@
       max-width: $container-width
       margin: 25px 0
       flex-direction: column
-    
+
       h2
         font: normal normal 800 30px/30px $font-poppins
         color: $primary-black
         text-align: left
         margin: 15px 0
-    
+
       .swiper
         padding: 20px 0
-    
+        width: $container-width
+
         .swiper-wrapper
           display: flex
           justify-content: center
           align-items: center
           gap: 10px
-    
+
           .card-produto
             display: flex
             flex-direction: column
@@ -49,41 +50,61 @@
             border-radius: 10px
             padding: 25px
             max-width: 300px
-    
+
             picture img
               width: 250px
               height: auto
-    
+
             p
               color: $primary-black
               font: normal normal 500 13px/17px $font-poppins
               text-align: center
               max-width: 230px
-    
+
             .preco
               display: flex
               flex-direction: column
               justify-content: center
               align-items: center
               font-size: 12px
-    
+
               .traco
                 text-decoration: line-through
-    
+
               p
                 color: $primary-gray-400
-    
+
               h3
                 font: normal normal 900 20px/20px $font-poppins
                 color: $primary-green
-    
+
             button
               @extend .btn
               @extend .btn-green
               font: normal normal 700 13px/17px $font-poppins
               width: 180px
               height: 45px
-    
+
+    .arrow
+      background-color: $primary-black
+      color: $primary-white
+      width: 35px
+      height: 25px
+      border-radius: 5px
+      display: flex
+      align-items: center
+      justify-content: center
+
+      img
+        width: 18px
+        height: 15px
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after
+      display: none
+      content: none
+
+
     .container-banner
       display: flex
       justify-content: center
@@ -94,3 +115,4 @@
         width: 100%
         max-width: 620px
         height: auto
+        

@@ -13,7 +13,15 @@
   letter-spacing: 4.8px;
 }
 
-.btn, .main .container .vitrine .swiper .swiper-wrapper .card-produto button, .header .container .busca button, .header .container .icones .menu-login .dropdown button, .header .container .icones .menu-atendimento .dropdown button {
+@media (max-width: 600px) {
+  .teste {
+    height: 45px;
+  }
+  .teste p {
+    text-align: center;
+  }
+}
+.btn, .main .container .vitrine .swiper .swiper-wrapper .card-produto button {
   border-radius: 5px;
   font: bold 14px/14px poppins, sans-serif;
   cursor: pointer;
@@ -21,133 +29,135 @@
   border: none;
 }
 
-.btn-green, .main .container .vitrine .swiper .swiper-wrapper .card-produto button, .header .container .busca button, .header .container .icones .menu-login .dropdown button.btn-green, .header .container .icones .menu-login .dropdown .busca button, .header .container .busca .icones .menu-login .dropdown button, .header .container .icones .menu-atendimento .dropdown button.btn-green, .header .container .icones .menu-atendimento .dropdown .busca button, .header .container .busca .icones .menu-atendimento .dropdown button {
+.btn-green, .main .container .vitrine .swiper .swiper-wrapper .card-produto button {
   background: #34CB2E;
   color: #000000;
 }
 
-.btn-black, .header .container .icones .menu-login .dropdown button.btn-black, .header .container .icones .menu-atendimento .dropdown button.btn-black {
+.btn-black {
   background: #000000;
   color: #FFFFFF;
 }
 
-.header-input, .header .container .busca input {
-  background: #EDEDED;
-  color: #707070;
-  font: normal normal normal 12px/5px poppins, sans-serif;
-  border: none;
-  border-radius: 5px;
-  padding: 10px;
-}
-
-.header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #FFFFFF;
-  height: 100px;
-}
-.header .container {
-  display: flex;
+header {
+  position: fixed;
+  top: 30px;
   width: 100%;
-  max-width: 1285px;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-  padding: 0 16px;
-}
-.header .container .logo {
+  height: 80px;
+  background: #F3F2F3;
+  font-family: poppins, sans-serif;
+  font-weight: bold;
   display: flex;
   justify-content: center;
+}
+header .container {
   align-items: center;
+  display: inline-flex;
+  box-sizing: border-box;
+  flex-direction: row;
+  flex-grow: 1;
+  padding: 0 20px;
+  max-width: 70%;
 }
-.header .container .logo img {
-  width: 192px;
-  height: 30px;
-}
-.header .container .busca {
-  display: flex;
-  gap: 5px;
-  height: 35px;
-  width: 594px;
-  justify-content: center;
-  margin: 10px;
-}
-.header .container .busca input {
-  flex: 1;
-  min-width: 0;
-}
-.header .container .icones {
-  display: flex;
-  justify-content: center;
+header .logo {
   align-items: center;
-  gap: 15px;
-  font-size: 12px;
-  text-align: center;
-  min-width: 350px;
+  display: inline-flex;
+  flex-direction: row;
 }
-.header .container .icones .menu-login, .header .container .icones .menu-atendimento {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+header .logo span {
+  color: #924FCD;
+  font-weight: 900;
 }
-.header .container .icones .menu-login:hover .dropdown, .header .container .icones .menu-atendimento:hover .dropdown {
-  display: flex;
-}
-.header .container .icones .menu-login .dropdown, .header .container .icones .menu-atendimento .dropdown {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  position: absolute;
-  top: 100%;
-  padding: 15px;
-  background: #FFFFFF;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  z-index: 100;
-  width: 175px;
-}
-.header .container .icones .menu-login .dropdown span, .header .container .icones .menu-login .dropdown a, .header .container .icones .menu-atendimento .dropdown span, .header .container .icones .menu-atendimento .dropdown a {
-  font: normal normal 500 12px/12px poppins, sans-serif;
-  color: #000000;
-  text-align: center;
-}
-.header .container .icones a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+header .logo span a, header .logo span a:hover {
   text-decoration: none;
-  color: #000000;
-  gap: 5px;
-  font: normal normal normal 12px/12px poppins, sans-serif;
 }
-.header .container .icones a div {
-  position: relative;
+header .busca {
+  margin: 0 16px;
+  flex: 1 0 auto;
+}
+header input[type=search] {
+  background: #E6E6E6 no-repeat 13px 13px;
+  background-image: url("data:image/png;base64,...");
+  border: none;
+  width: 100%;
+  line-height: 19px;
+  padding: 11px;
+  border-radius: 5px;
+  text-align: left;
+  font-size: 14px;
+  font-family: inherit;
+  color: #738289;
+  outline: none;
+  text-indent: 30px;
+  display: block;
+}
+header nav {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
 }
-.header .container .icones a div img {
-  width: 24px;
-  height: 24px;
+header nav a {
+  text-decoration: none;
+  color: #433D3D;
+  line-height: 80px;
+  transition: all 0.3s;
 }
-.header .container .icones a div span {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  background: #000000;
-  font: normal normal bold 12px/12px poppins, sans-serif;
-  color: #FFFFFF;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 100%;
-  width: 18px;
-  height: 18px;
+header nav a:not(:first-child) {
+  margin-left: 25px;
+}
+header nav a:hover {
+  opacity: 0.6;
 }
 
+.menu {
+  display: none;
+}
+
+.content {
+  margin-top: 80px;
+  padding: 16px;
+  color: #FFF;
+  background: #151515;
+}
+.content h3 {
+  margin: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .menu {
+    display: block;
+    line-height: 80px;
+    margin: 0;
+  }
+  header nav {
+    width: 100%;
+    position: absolute;
+    display: none;
+    top: 80px;
+    left: 0;
+  }
+  header nav a {
+    display: inline-block;
+    background: #F3F2F3;
+    color: #151515;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    line-height: 0;
+  }
+  header nav a:not(:first-child),
+  header nav a li {
+    margin: 0;
+  }
+  header nav a:hover {
+    opacity: 1;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  .active {
+    display: block;
+  }
+}
 .banner img {
   width: 100%;
 }
@@ -162,7 +172,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 1285px;
+  max-width: 70%;
   padding: 0 16px;
   box-sizing: border-box;
   justify-content: center;
@@ -170,7 +180,7 @@
 }
 .main .container .vitrine {
   display: flex;
-  max-width: 1285px;
+  max-width: 70%;
   margin: 25px 0;
   flex-direction: column;
 }
@@ -182,6 +192,7 @@
 }
 .main .container .vitrine .swiper {
   padding: 20px 0;
+  width: 70%;
 }
 .main .container .vitrine .swiper .swiper-wrapper {
   display: flex;
@@ -233,6 +244,25 @@
   width: 180px;
   height: 45px;
 }
+.main .container .arrow {
+  background-color: #000000;
+  color: #FFFFFF;
+  width: 35px;
+  height: 25px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main .container .arrow img {
+  width: 18px;
+  height: 15px;
+}
+.main .container .swiper-button-prev::after,
+.main .container .swiper-button-next::after {
+  display: none;
+  content: none;
+}
 .main .container .container-banner {
   display: flex;
   justify-content: center;
@@ -255,7 +285,7 @@
 .info div {
   display: flex;
   width: 100%;
-  max-width: 1285px;
+  max-width: 70%;
   justify-content: center;
   align-items: center;
   gap: 20px;
