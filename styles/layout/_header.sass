@@ -1,35 +1,27 @@
 @use '../utils/variables' as *
 @use '../components/components'
 
-.header-input
-  background: $primary-gray-200
-  color: $primary-gray-500
-  font: normal normal normal 12px/5px $font-poppins
-  border: none
-  border-radius: 5px
-  padding: 10px
-
-
-.header
+header
+  height: 100px
+  background: $primary-white
+  font-family: $font-poppins
+  font-weight: bold
   display: flex
   justify-content: center
-  align-items: center
-  background: $primary-white
-  height: 100px
+  width: 100%
 
   .container
-    display: flex
-    width: 100%
-    max-width: $container-width
-    justify-content: center
     align-items: center
-    gap: 40px
-    padding: 0 16px
+    display: inline-flex
+    box-sizing: border-box
+    flex-direction: row
+    max-width: $container-width
+    gap: 25px
 
     .logo
       display: flex
-      justify-content: center
       align-items: center
+      justify-content: center
 
       img
         width: 192px
@@ -43,8 +35,13 @@
       justify-content: center
       margin: 10px
 
-      input
-        @extend .header-input
+      input[type="search"]
+        background: $primary-gray-200
+        color: $primary-gray-500
+        font: normal normal normal 12px/5px $font-poppins
+        border: none
+        border-radius: 5px
+        padding: 10px
         flex: 1
         min-width: 0
 
@@ -52,16 +49,20 @@
         @extend .btn
         @extend .btn-green
 
-    .icones
-      display: flex
-      justify-content: center
-      align-items: center
-      gap: 15px
-      font-size: 12px
-      text-align: center
-      min-width: 350px
+      .icon
+        display: none
 
-      .menu-login, .menu-atendimento
+      .text
+        display: block
+
+    nav
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: space-between
+      gap: 15px
+
+      .hover-menu
         position: relative
         display: flex
         flex-direction: column
@@ -130,3 +131,82 @@
             border-radius: 100%
             width: 18px
             height: 18px
+
+.menu i img
+  display: none
+
+
+@media only screen and (max-width: 768px)
+  header
+    justify-content: center
+    width: 100%
+
+    .container
+      max-width: 100%
+
+      .busca
+        width: 300px
+
+      a span
+        display: none
+
+@media only screen and (max-width: 600px)
+  .menu
+    display: block
+    line-height: 80px
+    margin: 0
+
+  header
+    top: 50px
+    height: 80px
+
+    .container
+      gap: 0
+
+      .logo img
+        display: none
+
+      .busca
+        width: 500px
+
+        .icon
+          display: flex
+          justify-content: center
+          align-items: center
+          width: 32px
+
+        .text
+          display: none
+
+
+      .menu i img
+        display: flex
+
+      nav
+        display: none
+        width: 100%
+        position: absolute
+        top: 120px
+        left: 0
+        flex-direction: column
+        background: $primary-gray-200
+        z-index: 101
+
+        a
+          display: inline-flex
+          width: 100%
+          text-align: center
+          padding: 20px 0
+
+          span
+            display: flex
+
+      nav.active
+        display: flex
+
+  .active
+    display: block
+
+@media only screen and (max-width: 425px)
+  .busca
+    width: 400px

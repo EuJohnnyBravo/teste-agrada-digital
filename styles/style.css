@@ -21,7 +21,7 @@
     text-align: center;
   }
 }
-.btn, .main .container .vitrine .swiper .swiper-wrapper .card-produto button {
+.btn, .main .container .vitrine .swiper .swiper-wrapper .card-produto button, header .container .busca button, header .container nav .hover-menu .dropdown button {
   border-radius: 5px;
   font: bold 14px/14px poppins, sans-serif;
   cursor: pointer;
@@ -29,133 +29,214 @@
   border: none;
 }
 
-.btn-green, .main .container .vitrine .swiper .swiper-wrapper .card-produto button {
+.btn-green, .main .container .vitrine .swiper .swiper-wrapper .card-produto button, header .container .busca button, header .container nav .hover-menu .dropdown button.btn-green, header .container nav .hover-menu .dropdown .busca button, header .container .busca nav .hover-menu .dropdown button {
   background: #34CB2E;
   color: #000000;
 }
 
-.btn-black {
+.btn-black, header .container nav .hover-menu .dropdown button.btn-black {
   background: #000000;
   color: #FFFFFF;
 }
 
 header {
-  position: fixed;
-  top: 30px;
-  width: 100%;
-  height: 80px;
-  background: #F3F2F3;
+  height: 100px;
+  background: #FFFFFF;
   font-family: poppins, sans-serif;
   font-weight: bold;
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 header .container {
   align-items: center;
   display: inline-flex;
   box-sizing: border-box;
   flex-direction: row;
-  flex-grow: 1;
-  padding: 0 20px;
-  max-width: 70%;
+  max-width: 80%;
+  gap: 25px;
 }
-header .logo {
+header .container .logo {
+  display: flex;
   align-items: center;
-  display: inline-flex;
-  flex-direction: row;
+  justify-content: center;
 }
-header .logo span {
-  color: #924FCD;
-  font-weight: 900;
+header .container .logo img {
+  width: 192px;
+  height: 30px;
 }
-header .logo span a, header .logo span a:hover {
-  text-decoration: none;
+header .container .busca {
+  display: flex;
+  gap: 5px;
+  height: 35px;
+  width: 594px;
+  justify-content: center;
+  margin: 10px;
 }
-header .busca {
-  margin: 0 16px;
-  flex: 1 0 auto;
-}
-header input[type=search] {
-  background: #E6E6E6 no-repeat 13px 13px;
-  background-image: url("data:image/png;base64,...");
+header .container .busca input[type=search] {
+  background: #EDEDED;
+  color: #707070;
+  font: normal normal normal 12px/5px poppins, sans-serif;
   border: none;
-  width: 100%;
-  line-height: 19px;
-  padding: 11px;
   border-radius: 5px;
-  text-align: left;
-  font-size: 14px;
-  font-family: inherit;
-  color: #738289;
-  outline: none;
-  text-indent: 30px;
+  padding: 10px;
+  flex: 1;
+  min-width: 0;
+}
+header .container .busca .icon {
+  display: none;
+}
+header .container .busca .text {
   display: block;
 }
-header nav {
+header .container nav {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+  gap: 15px;
 }
-header nav a {
+header .container nav .hover-menu {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header .container nav .hover-menu:hover .dropdown {
+  display: flex;
+}
+header .container nav .hover-menu .dropdown {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  top: 100%;
+  padding: 15px;
+  background: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  width: 175px;
+}
+header .container nav .hover-menu .dropdown span, header .container nav .hover-menu .dropdown a {
+  font: normal normal 500 12px/12px poppins, sans-serif;
+  color: #000000;
+  text-align: center;
+}
+header .container nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
-  color: #433D3D;
-  line-height: 80px;
-  transition: all 0.3s;
+  color: #000000;
+  gap: 5px;
+  font: normal normal normal 12px/12px poppins, sans-serif;
 }
-header nav a:not(:first-child) {
-  margin-left: 25px;
+header .container nav a div {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-header nav a:hover {
-  opacity: 0.6;
+header .container nav a div img {
+  width: 24px;
+  height: 24px;
+}
+header .container nav a div span {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #000000;
+  font: normal normal bold 12px/12px poppins, sans-serif;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  width: 18px;
+  height: 18px;
 }
 
-.menu {
+.menu i img {
   display: none;
 }
 
-.content {
-  margin-top: 80px;
-  padding: 16px;
-  color: #FFF;
-  background: #151515;
+@media only screen and (max-width: 768px) {
+  header {
+    justify-content: center;
+    width: 100%;
+  }
+  header .container {
+    max-width: 100%;
+  }
+  header .container .busca {
+    width: 300px;
+  }
+  header .container a span {
+    display: none;
+  }
 }
-.content h3 {
-  margin: 0;
-}
-
 @media only screen and (max-width: 600px) {
   .menu {
     display: block;
     line-height: 80px;
     margin: 0;
   }
-  header nav {
+  header {
+    top: 50px;
+    height: 80px;
+  }
+  header .container {
+    gap: 0;
+  }
+  header .container .logo img {
+    display: none;
+  }
+  header .container .busca {
+    width: 500px;
+  }
+  header .container .busca .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+  }
+  header .container .busca .text {
+    display: none;
+  }
+  header .container .menu i img {
+    display: flex;
+  }
+  header .container nav {
+    display: none;
     width: 100%;
     position: absolute;
-    display: none;
-    top: 80px;
+    top: 120px;
     left: 0;
+    flex-direction: column;
+    background: #EDEDED;
+    z-index: 101;
   }
-  header nav a {
-    display: inline-block;
-    background: #F3F2F3;
-    color: #151515;
-    margin: 0;
+  header .container nav a {
+    display: inline-flex;
     width: 100%;
     text-align: center;
     padding: 20px 0;
-    line-height: 0;
   }
-  header nav a:not(:first-child),
-  header nav a li {
-    margin: 0;
+  header .container nav a span {
+    display: flex;
   }
-  header nav a:hover {
-    opacity: 1;
-    color: rgba(0, 0, 0, 0.5);
+  header .container nav.active {
+    display: flex;
   }
   .active {
     display: block;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .busca {
+    width: 400px;
   }
 }
 .banner img {
@@ -172,7 +253,7 @@ header nav a:hover {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 70%;
+  max-width: 80%;
   padding: 0 16px;
   box-sizing: border-box;
   justify-content: center;
@@ -180,7 +261,7 @@ header nav a:hover {
 }
 .main .container .vitrine {
   display: flex;
-  max-width: 70%;
+  max-width: 80%;
   margin: 25px 0;
   flex-direction: column;
 }
@@ -192,7 +273,7 @@ header nav a:hover {
 }
 .main .container .vitrine .swiper {
   padding: 20px 0;
-  width: 70%;
+  width: 80%;
 }
 .main .container .vitrine .swiper .swiper-wrapper {
   display: flex;
@@ -285,7 +366,7 @@ header nav a:hover {
 .info div {
   display: flex;
   width: 100%;
-  max-width: 70%;
+  max-width: 80%;
   justify-content: center;
   align-items: center;
   gap: 20px;
