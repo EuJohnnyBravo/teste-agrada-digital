@@ -1,13 +1,19 @@
-*, *::before, *::after {
-  box-sizing: border-box;
+.teste {
+  background: #000000;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.teste p {
+  font-family: poppins, sans-serif;
+  color: #FFFFFF;
+  font-size: 12px;
+  height: 15px;
+  letter-spacing: 4.8px;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-}
-
-.btn, .main .container .vitrine .swiper .swiper-wrapper .card-produto button, .header .container .icones .menu-login .dropdown button, .header .container .icones .menu-atendimento .dropdown button, .header .container .busca button {
+.btn, .main .container .vitrine .swiper .swiper-wrapper .card-produto button, .header .container .busca button, .header .container .icones .menu-login .dropdown button, .header .container .icones .menu-atendimento .dropdown button {
   border-radius: 5px;
   font: bold 14px/14px poppins, sans-serif;
   cursor: pointer;
@@ -15,7 +21,7 @@ body {
   border: none;
 }
 
-.btn-green, .main .container .vitrine .swiper .swiper-wrapper .card-produto button, .header .container .icones .menu-login .dropdown button.btn-green, .header .container .icones .menu-login .dropdown .busca button, .header .container .busca .icones .menu-login .dropdown button, .header .container .icones .menu-atendimento .dropdown button.btn-green, .header .container .icones .menu-atendimento .dropdown .busca button, .header .container .busca .icones .menu-atendimento .dropdown button, .header .container .busca button {
+.btn-green, .main .container .vitrine .swiper .swiper-wrapper .card-produto button, .header .container .busca button, .header .container .icones .menu-login .dropdown button.btn-green, .header .container .icones .menu-login .dropdown .busca button, .header .container .busca .icones .menu-login .dropdown button, .header .container .icones .menu-atendimento .dropdown button.btn-green, .header .container .icones .menu-atendimento .dropdown .busca button, .header .container .busca .icones .menu-atendimento .dropdown button {
   background: #34CB2E;
   color: #000000;
 }
@@ -32,21 +38,6 @@ body {
   border: none;
   border-radius: 5px;
   padding: 10px;
-}
-
-.teste {
-  background: #000000;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.teste p {
-  font-family: poppins, sans-serif;
-  color: #FFFFFF;
-  font-size: 12px;
-  height: 15px;
-  letter-spacing: 4.8px;
 }
 
 .header {
@@ -191,8 +182,6 @@ body {
 }
 .main .container .vitrine .swiper {
   padding: 20px 0;
-  width: 1285px;
-  height: 300px;
 }
 .main .container .vitrine .swiper .swiper-wrapper {
   display: flex;
@@ -296,6 +285,15 @@ body {
 .footer h2 {
   font: normal normal bold 15px/15px poppins, sans-serif;
   color: #34CB2E;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

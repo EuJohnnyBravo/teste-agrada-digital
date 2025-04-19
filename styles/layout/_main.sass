@@ -1,0 +1,96 @@
+@use '../utils/variables' as *
+@use '../components/components'
+
+.main
+  display: flex
+  justify-content: center
+  background: $primary-gray-50
+  padding: 25px 0
+
+  .container
+    display: flex
+    flex-direction: column
+    width: 100%
+    max-width: $container-width
+    padding: 0 16px
+    box-sizing: border-box
+    justify-content: center
+    align-items: center
+
+    .vitrine
+      display: flex
+      max-width: $container-width
+      margin: 25px 0
+      flex-direction: column
+    
+      h2
+        font: normal normal 800 30px/30px $font-poppins
+        color: $primary-black
+        text-align: left
+        margin: 15px 0
+    
+      .swiper
+        padding: 20px 0
+    
+        .swiper-wrapper
+          display: flex
+          justify-content: center
+          align-items: center
+          gap: 10px
+    
+          .card-produto
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            gap: 25px
+            background: $primary-white
+            border: 1px solid $primary-gray-300
+            border-radius: 10px
+            padding: 25px
+            max-width: 300px
+    
+            picture img
+              width: 250px
+              height: auto
+    
+            p
+              color: $primary-black
+              font: normal normal 500 13px/17px $font-poppins
+              text-align: center
+              max-width: 230px
+    
+            .preco
+              display: flex
+              flex-direction: column
+              justify-content: center
+              align-items: center
+              font-size: 12px
+    
+              .traco
+                text-decoration: line-through
+    
+              p
+                color: $primary-gray-400
+    
+              h3
+                font: normal normal 900 20px/20px $font-poppins
+                color: $primary-green
+    
+            button
+              @extend .btn
+              @extend .btn-green
+              font: normal normal 700 13px/17px $font-poppins
+              width: 180px
+              height: 45px
+    
+    .container-banner
+      display: flex
+      justify-content: center
+      gap: 10px
+      margin: 25px 0
+
+      picture img
+        width: 100%
+        max-width: 620px
+        height: auto
