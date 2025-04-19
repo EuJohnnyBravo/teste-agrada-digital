@@ -1,0 +1,324 @@
+$font-poppins: poppins, sans-serif
+$font-axiforma: Axiforma, sans-serif
+$primary-green: #34CB2E
+$primary-white: #FFFFFF
+$primary-gray-50: #F1F1F1
+$primary-gray-100: #A7A7A780
+$primary-gray-200: #EDEDED
+$primary-gray-300: #DDDDDD
+$primary-gray-400: #909090
+$primary-gray-500: #707070
+$primary-black: #000000
+$container-width: 1285px
+
+*, *::before, *::after
+  box-sizing: border-box
+
+body
+  margin: 0
+  padding: 0
+
+.btn
+  border-radius: 5px
+  font: bold 14px/14px $font-poppins
+  cursor: pointer
+  padding: 10px 20px
+  border: none
+
+.btn-green
+  background: $primary-green
+  color: $primary-black
+
+.btn-black
+  background: $primary-black
+  color: $primary-white
+
+.header-input
+  background: $primary-gray-200
+  color: $primary-gray-500
+  font: normal normal normal 12px/5px $font-poppins
+  border: none
+  border-radius: 5px
+  padding: 10px
+
+
+.teste
+  background: $primary-black
+  height: 30px
+  display: flex
+  justify-content: center
+  align-items: center
+
+  p
+    font-family: $font-poppins
+    color: $primary-white
+    font-size: 12px
+    height: 15px
+    letter-spacing: 4.8px
+
+.header
+  display: flex
+  justify-content: center
+  align-items: center
+  background: $primary-white
+  height: 100px
+
+  .container
+    display: flex
+    width: 100%
+    max-width: $container-width
+    justify-content: center
+    align-items: center
+    gap: 40px
+    padding: 0 16px
+
+    .logo
+      display: flex
+      justify-content: center
+      align-items: center
+
+      img
+        width: 192px
+        height: 30px
+
+    .busca
+      display: flex
+      gap: 5px
+      height: 35px
+      width: 594px
+      justify-content: center
+      margin: 10px
+
+      input
+        @extend .header-input
+        flex: 1
+        min-width: 0
+
+      button
+        @extend .btn
+        @extend .btn-green
+
+    .icones
+      display: flex
+      justify-content: center
+      align-items: center
+      gap: 15px
+      font-size: 12px
+      text-align: center
+      min-width: 350px
+
+      .menu-login, .menu-atendimento
+        position: relative
+        display: flex
+        flex-direction: column
+        align-items: center
+
+        &:hover .dropdown
+          display: flex
+
+        .dropdown
+          display: none
+          flex-direction: column
+          align-items: center
+          gap: 10px
+          position: absolute
+          top: 100%
+          padding: 15px
+          background: $primary-white
+          border-radius: 8px
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+          z-index: 100
+          width: 175px
+
+          span, a
+            font: normal normal 500 12px/12px $font-poppins
+            color: $primary-black
+            text-align: center
+
+          button
+            @extend .btn
+
+            &.btn-green
+              @extend .btn-green
+
+            &.btn-black
+              @extend .btn-black
+
+      a
+        display: flex
+        align-items: center
+        justify-content: center
+        text-decoration: none
+        color: $primary-black
+        gap: 5px
+        font: normal normal normal 12px/12px $font-poppins
+
+        div
+          position: relative
+          display: flex
+          align-items: center
+          justify-content: center
+
+          img
+            width: 24px
+            height: 24px
+
+          span
+            position: absolute
+            top: -10px
+            right: -10px
+            background: $primary-black
+            font: normal normal bold 12px/12px $font-poppins
+            color: $primary-white
+            display: flex
+            align-items: center
+            justify-content: center
+            border-radius: 100%
+            width: 18px
+            height: 18px
+
+.banner
+  img
+    width: 100%
+
+.main
+  display: flex
+  justify-content: center
+  background: $primary-gray-50
+  padding: 25px 0
+
+  .container
+    display: flex
+    flex-direction: column
+    width: 100%
+    max-width: $container-width
+    padding: 0 16px
+    box-sizing: border-box
+    justify-content: center
+    align-items: center
+
+    .vitrine
+      display: flex
+      max-width: $container-width
+      margin: 25px 0
+      flex-direction: column
+
+      h2
+        font: normal normal 800 30px/30px $font-poppins
+        color: $primary-black
+        text-align: left
+        margin: 15px 0
+
+      .swiper
+        padding: 20px 0
+        width: $container-width
+        height: 300px
+
+        .swiper-wrapper
+          display: flex
+          justify-content: center
+          align-items: center
+          gap: 10px
+
+          .card-produto
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            gap: 25px
+            background: $primary-white
+            border: 1px solid $primary-gray-300
+            border-radius: 10px
+            padding: 25px
+            max-width: 300px
+
+            picture img
+              width: 250px
+              height: auto
+
+            p
+              color: $primary-black
+              font: normal normal 500 13px/17px $font-poppins
+              text-align: center
+              max-width: 230px
+
+            .preco
+              display: flex
+              flex-direction: column
+              justify-content: center
+              align-items: center
+              font-size: 12px
+
+              .traco
+                text-decoration: line-through
+
+              p
+                color: $primary-gray-400
+
+              h3
+                font: normal normal 900 20px/20px $font-poppins
+                color: $primary-green
+
+            button
+              @extend .btn
+              @extend .btn-green
+              font: normal normal 700 13px/17px $font-poppins
+              width: 180px
+              height: 45px
+
+    .container-banner
+      display: flex
+      justify-content: center
+      gap: 10px
+      margin: 25px 0
+
+      picture img
+        width: 100%
+        max-width: 620px
+        height: auto
+
+.info
+  display: flex
+  justify-content: center
+  align-items: center
+  background: $primary-black
+  height: 118px
+
+  div
+    display: flex
+    width: 100%
+    max-width: $container-width
+    justify-content: center
+    align-items: center
+    gap: 20px
+    padding: 0 16px
+
+    .logo img
+      width: 184px
+      height: 29px
+
+    p
+      font: normal normal normal 12px/20px $font-axiforma
+      letter-spacing: -0.3px
+      text-align: justify
+      color: $primary-white
+      width: 1020px
+      height: 58px
+
+.footer
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  height: 155px
+  gap: 8px
+
+  h2
+    font: normal normal bold 15px/15px $font-poppins
+    color: $primary-green
+
+
+        
+  
+      
+    
