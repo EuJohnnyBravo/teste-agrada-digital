@@ -21,7 +21,7 @@
     text-align: center;
   }
 }
-.btn, .main .container .vitrine .swiper .swiper-wrapper .card-produto button, header .container .busca button, header .container nav .hover-menu .dropdown button {
+.btn, .main .container .vitrine button, header .container .busca button, header .container nav .hover-menu .dropdown button {
   border-radius: 5px;
   font: bold 14px/14px poppins, sans-serif;
   cursor: pointer;
@@ -29,7 +29,7 @@
   border: none;
 }
 
-.btn-green, .main .container .vitrine .swiper .swiper-wrapper .card-produto button, header .container .busca button, header .container nav .hover-menu .dropdown button.btn-green, header .container nav .hover-menu .dropdown .busca button, header .container .busca nav .hover-menu .dropdown button {
+.btn-green, .main .container .vitrine button, header .container .busca button, header .container nav .hover-menu .dropdown button.btn-green, header .container nav .hover-menu .dropdown .busca button, header .container .busca nav .hover-menu .dropdown button {
   background: #34CB2E;
   color: #000000;
 }
@@ -253,15 +253,14 @@ header .container nav a div span {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 80%;
-  padding: 0 16px;
   box-sizing: border-box;
   justify-content: center;
   align-items: center;
+  padding: 0 15px;
 }
 .main .container .vitrine {
   display: flex;
-  max-width: 80%;
+  max-width: 1250px;
   margin: 25px 0;
   flex-direction: column;
 }
@@ -272,55 +271,63 @@ header .container nav a div span {
   margin: 15px 0;
 }
 .main .container .vitrine .swiper {
-  padding: 20px 0;
-  width: 80%;
+  padding: 20px;
+  width: 100%;
 }
 .main .container .vitrine .swiper .swiper-wrapper {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
 }
-.main .container .vitrine .swiper .swiper-wrapper .card-produto {
+.main .container .vitrine .swiper .swiper-wrapper .swiper-slide {
+  width: auto !important;
+  min-width: 250px;
+  max-width: 100%;
+  flex: 1 1 100%;
+}
+.main .container .vitrine .swiper .swiper-wrapper .swiper-slide .card-produto {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 25px;
+  gap: 15px;
   background: #FFFFFF;
   border: 1px solid #DDDDDD;
   border-radius: 10px;
   padding: 25px;
   max-width: 300px;
+  width: 100%;
+  box-sizing: border-box;
 }
-.main .container .vitrine .swiper .swiper-wrapper .card-produto picture img {
-  width: 250px;
+.main .container .vitrine .swiper .swiper-wrapper .swiper-slide .card-produto picture img {
+  border-radius: 5px;
+  width: 100%;
+  max-width: 250px;
   height: auto;
 }
-.main .container .vitrine .swiper .swiper-wrapper .card-produto p {
+.main .container .vitrine p {
   color: #000000;
   font: normal normal 500 13px/17px poppins, sans-serif;
   text-align: center;
-  max-width: 230px;
+  max-width: 250px;
 }
-.main .container .vitrine .swiper .swiper-wrapper .card-produto .preco {
+.main .container .vitrine .preco {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 12px;
 }
-.main .container .vitrine .swiper .swiper-wrapper .card-produto .preco .traco {
+.main .container .vitrine .preco .traco {
   text-decoration: line-through;
 }
-.main .container .vitrine .swiper .swiper-wrapper .card-produto .preco p {
+.main .container .vitrine .preco p {
   color: #909090;
 }
-.main .container .vitrine .swiper .swiper-wrapper .card-produto .preco h3 {
+.main .container .vitrine .preco h3 {
   font: normal normal 900 20px/20px poppins, sans-serif;
   color: #34CB2E;
 }
-.main .container .vitrine .swiper .swiper-wrapper .card-produto button {
+.main .container .vitrine button {
+  margin: 0;
   font: normal normal 700 13px/17px poppins, sans-serif;
   width: 180px;
   height: 45px;
@@ -345,15 +352,16 @@ header .container nav a div span {
   content: none;
 }
 .main .container .container-banner {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin: 25px 0;
+  flex-wrap: wrap;
+}
+.main .container .container-banner picture {
+  flex: 1 1 100%;
+  text-align: center;
 }
 .main .container .container-banner picture img {
   width: 100%;
-  max-width: 620px;
   height: auto;
+  max-width: 620px;
 }
 
 .info {

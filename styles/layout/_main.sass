@@ -11,15 +11,14 @@
     display: flex
     flex-direction: column
     width: 100%
-    max-width: $container-width
-    padding: 0 16px
     box-sizing: border-box
     justify-content: center
     align-items: center
+    padding: 0 15px
 
     .vitrine
       display: flex
-      max-width: $container-width
+      max-width: 1250px
       margin: 25px 0
       flex-direction: column
 
@@ -30,60 +29,68 @@
         margin: 15px 0
 
       .swiper
-        padding: 20px 0
-        width: $container-width
+        padding: 20px
+        width: 100%
 
         .swiper-wrapper
           display: flex
-          justify-content: center
-          align-items: center
-          gap: 10px
 
-          .card-produto
-            display: flex
-            flex-direction: column
-            justify-content: center
-            align-items: center
-            gap: 25px
-            background: $primary-white
-            border: 1px solid $primary-gray-300
-            border-radius: 10px
-            padding: 25px
-            max-width: 300px
+          .swiper-slide
+            width: auto !important
+            min-width: 250px
+            max-width: 100%
+            flex: 1 1 100%
 
-            picture img
-              width: 250px
-              height: auto
-
-            p
-              color: $primary-black
-              font: normal normal 500 13px/17px $font-poppins
-              text-align: center
-              max-width: 230px
-
-            .preco
+            .card-produto
               display: flex
               flex-direction: column
               justify-content: center
               align-items: center
-              font-size: 12px
+              gap: 15px
+              background: $primary-white
+              border: 1px solid $primary-gray-300
+              border-radius: 10px
+              padding: 25px
+              max-width: 300px
+              width: 100%
+              box-sizing: border-box
 
-              .traco
-                text-decoration: line-through
+              picture img
+                border-radius: 5px
+                width: 100%
+                max-width: 250px
+                height: auto
 
-              p
-                color: $primary-gray-400
+      p
+        color: $primary-black
+        font: normal normal 500 13px/17px $font-poppins
+        text-align: center
+        max-width: 250px
 
-              h3
-                font: normal normal 900 20px/20px $font-poppins
-                color: $primary-green
+      .preco
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        font-size: 12px
 
-            button
-              @extend .btn
-              @extend .btn-green
-              font: normal normal 700 13px/17px $font-poppins
-              width: 180px
-              height: 45px
+        .traco
+          text-decoration: line-through
+
+        p
+          color: $primary-gray-400
+
+        h3
+          font: normal normal 900 20px/20px $font-poppins
+          color: $primary-green
+
+      button
+        @extend .btn
+        @extend .btn-green
+        margin: 0
+        font: normal normal 700 13px/17px $font-poppins
+        width: 180px
+        height: 45px
 
     .arrow
       background-color: $primary-black
@@ -106,13 +113,13 @@
 
 
     .container-banner
-      display: flex
-      justify-content: center
-      gap: 10px
-      margin: 25px 0
+      flex-wrap: wrap
 
-      picture img
-        width: 100%
-        max-width: 620px
-        height: auto
-        
+      picture
+        flex: 1 1 100%
+        text-align: center
+
+        img
+          width: 100%
+          height: auto
+          max-width: 620px

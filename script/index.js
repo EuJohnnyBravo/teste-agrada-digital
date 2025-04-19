@@ -1,7 +1,9 @@
 $(document).ready(function () {
+    const vitrine = $('.vitrine').first().html();
+    $('#vitrine-2').html(vitrine);
+
     const swiper = new Swiper(".swiper", {
-        slidesPerView: 4,
-        spaceBetween: 5,
+        spaceBetween: 10,
         slidesPerGroup: 1,
         loop: true,
         loopFillGroupWithBlank: true,
@@ -10,17 +12,22 @@ $(document).ready(function () {
             prevEl: ".swiper-button-prev",
         },
         breakpoints: {
-            768: {
+            0: {
+                slidesPerView: 1,
+            },
+            426: {
+                slidesPerView: 2,
+            },
+            769: {
                 slidesPerView: 3,
             },
-            425: {
-                slidesPerView: 2,
+            1025: {
+                slidesPerView: 4,
             }
         }
-    });
-});
 
-$(document).ready(function () {
+    });
+
     $('.menu').click(function () {
         $('nav').toggleClass('active');
         $(this).find('i').toggleClass('fa-bars fa-times');
